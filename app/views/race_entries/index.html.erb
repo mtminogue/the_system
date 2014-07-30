@@ -1,0 +1,31 @@
+<h1>Listing race_entries</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Race</th>
+      <th>Jockey</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @race_entries.each do |race_entry| %>
+      <tr>
+        <td><%= race_entry.date %></td>
+        <td><%= race_entry.race %></td>
+        <td><%= race_entry.jockey %></td>
+        <td><%= link_to 'Show', race_entry %></td>
+        <td><%= link_to 'Edit', edit_race_entry_path(race_entry) %></td>
+        <td><%= link_to 'Destroy', race_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Race entry', new_race_entry_path %>

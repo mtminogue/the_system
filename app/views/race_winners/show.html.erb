@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @race_winner.date %>
+</p>
+
+<p>
+  <strong>Race number:</strong>
+  <%= @race_winner.race_number %>
+</p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @race_winner.winner %>
+</p>
+
+<p>
+  <strong>Payout:</strong>
+  <%= @race_winner.payout %>
+</p>
+
+<%= link_to 'Edit', edit_race_winner_path(@race_winner) %> |
+<%= link_to 'Back', race_winners_path %>

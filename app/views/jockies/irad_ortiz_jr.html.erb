@@ -1,0 +1,30 @@
+<% provide(:title, 'Irad Ortiz, Jr.') %>
+
+<h1>Irad Ortiz, Jr.</h1>
+<%= render "race_stats" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Race</th>
+      <th>Jockey</th>
+      <th>Payout<th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irad_ortiz_jr_entries.each do |irad_ortiz_jr_entry| %>
+      <tr>
+        <td><%= irad_ortiz_jr_entry.date %></td>
+        <td><%= irad_ortiz_jr_entry.race %></td>
+        <td><%= irad_ortiz_jr_entry.jockey %></td>
+        <% if irad_ortiz_jr_entry.jockey == irad_ortiz_jr_entry.race_winner.winner %>
+        <td><%= irad_ortiz_jr_entry.race_winner.payout %></td>
+        <% else %>
+        <td></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

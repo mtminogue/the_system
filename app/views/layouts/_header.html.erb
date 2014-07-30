@@ -1,0 +1,42 @@
+<header role="banner">
+	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#main-navbar">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<%= link_to "TheSystem", root_path, id: "logo", class: "navbar-brand" %>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div id="main-navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "Home", root_path, class: "active" %></li>
+				<li><%= link_to "Race Entries", race_entries_path %></li>
+				<li><%= link_to "Race Winners", race_winners_path %></li>
+        <li class="dropdown">
+        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Jockies <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to "Javier Castellano", javier_castellano_path %></li>
+            <li><%= link_to "John R. Velazquez", john_r_velazquez_path %></li>
+            <li><%= link_to "Jose L. Ortiz", jose_l_ortiz_path %></li> 
+            <li><%= link_to "Jose Lezcano", jose_lezcano_path %></li>
+            <li><%= link_to "Joel Rosario", joel_rosario_path %></li>
+            <li><%= link_to "Lanfranco Dettori", lanfranco_dettori_path %></li>
+            <li><%= link_to "Irad Ortiz, Jr.", irad_ortiz_jr_path %></li>
+            <li><%= link_to "Luis Saez", luis_saez_path %></li>
+            <li><%= link_to "Ragiv Maragh", rajiv_maragh_path %></li>
+            <li><%= link_to "Junior Alvarado", junior_alvarado_path %></li>
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+</header>
