@@ -70,3 +70,5 @@ end
 group :production do
   gem "rails_12factor"
 end
+
+gem 'jquery-datatables-rails', '~> 2.1.10.0.4'

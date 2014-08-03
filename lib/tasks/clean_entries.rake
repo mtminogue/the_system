@@ -1,9 +1,10 @@
 desc 'Clean entries'
 task :clean_entries => :environment do
 
-	#Update this with each rake task.
-	RaceEntry.where(:date => "Saratoga - July 29, 2014").each do |date|
-		date.update_attribute(:date, "20140729")
+	#Update this with each rake task!**
+	RaceEntry.where(:date => "Saratoga - August 2, 2014").each do |date|
+		#Update this with each rake task!**
+		date.update_attribute(:date, "2014-08-02")
 	end
 
 	RaceEntry.where(:race => "Race 1").each do |race|

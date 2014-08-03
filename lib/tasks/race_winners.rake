@@ -3,8 +3,8 @@ task :fetch_race_winners => :environment do
 	require 'nokogiri'
 	require 'open-uri'
 
-	#Enter URL of race results
-  url = "http://www.nyra.com/saratoga/results/20140728/"
+	#Update this with each rake task!**
+  url = "http://www.nyra.com/saratoga/results/20140802/"
   doc = Nokogiri::HTML(open(url))
 
   doc.css(".modSec").each do |race|

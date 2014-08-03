@@ -1,9 +1,10 @@
 desc 'Clean winners'
 task :clean_winners => :environment do
 
-	#Change this date when running rake task.
-	RaceWinner.where(:date => "\r\n        Saratoga - July 28, 2014").each do |date|
-		date.update_attribute(:date, "20140728")
+	#Update this with each rake task!**
+	RaceWinner.where(:date => "\r\n        Saratoga - August 2, 2014").each do |date|
+		#Update this with each rake task!**
+		date.update_attribute(:date, "2014-08-02")
 	end
 
 	RaceWinner.where(:race_number => "\r\n                        Race 1").each do |race|
