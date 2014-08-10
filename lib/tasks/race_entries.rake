@@ -4,7 +4,7 @@ task :fetch_race_entries => :environment do
 	require 'open-uri'
 
 	#Enter URL of race entries!**
-	url = "http://www.nyra.com/saratoga/entries/20140802/"
+	url = "http://www.nyra.com/saratoga/entries/20140809/"
 	doc = Nokogiri::HTML(open(url))
 
   doc.css(".modSec").each do |race|
