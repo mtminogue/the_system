@@ -4,7 +4,7 @@ task :fetch_race_winners => :environment do
 	require 'open-uri'
 
 	#Update this with each rake task!**
-  url = "http://www.nyra.com/saratoga/results/20140813/"
+  url = "http://www.nyra.com/saratoga/results/20140814/"
   doc = Nokogiri::HTML(open(url))
 
   doc.css(".modSec").each do |race|
