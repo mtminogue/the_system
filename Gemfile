@@ -44,7 +44,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'jquery-datatables-rails', '~> 2.1.10.0.4'
+gem 'jquery-datatables-rails', '~> 2.2.1'
 
 gem "bootstrap-sass", "~> 3.1.1.1"
 gem "sprockets"
