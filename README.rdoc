@@ -1,28 +1,30 @@
-== README
+The application  allows the user to choose a "Quitting Bet" and a "Starting Bet", which are used to predict winnings based on a betting strategy where the user doubles the bet up to the "Quitting Bet".
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You must run a series of rake tasks to update the local database.  In the first 4 instances be sure to update the date.
 
-Things you may want to cover:
+To update race entries:
+<code>rake fetch_race_entries</code>
 
-* Ruby version
+To clean race entries:
+<code>rake clean_entries</code>
 
-* System dependencies
+To update race winners:
+<code>rake fetch_race_winners</code>
 
-* Configuration
+To clean race winners:
+<code>rake clean_winners</code>
 
-* Database creation
+To add winners to entries:
+<code>rake add_winner_to_entries</code>
 
-* Database initialization
+Update production database:
 
-* How to run the test suite
+ToDo:
 
-* Services (job queues, cache servers, search engines, etc.)
+Figure out a way to efficiently update and clean all race entries and winners, not just those of top jockeys.
 
-* Deployment instructions
+Add number of times jockey has day without win.  Days without wins are NOT good.
 
-* ...
+Figure out a way to measure clusters of wins.  Does the jockey win in streaks or are jockey wins evenly distributed.
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Update the production database directly.  Run something like <code>heroku rake ...</code> using something like "Date.current.to_formatted_s(:number)" instead of manually changing the date.
